@@ -1,0 +1,60 @@
+:root {
+  --primary-green: rgb(44, 187, 75);
+  --bg-light: #ffffff;
+  --bg-light-alt: #f0f0f0;
+  --bg-dark: #121212;
+  --bg-dark-alt: #1e1e1e;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --bg-alt: var(--bg-light-alt);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px; /* ensure content sits below fixed header */
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* theme variable overrides via body classes */
+body.light {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+}
+body.light .pageContainer {
+  background: var(--bg);
+}
+body.dark {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --bg-alt: var(--bg-dark-alt);
+}
+body.dark .pageContainer {
+  background: var(--bg);
+}
+
+/* Add global page container styling */
+.pageContainer {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg);
+}

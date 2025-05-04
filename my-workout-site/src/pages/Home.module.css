@@ -1,0 +1,53 @@
+/* src/pages/Home.module.css */
+.home {
+  /* using global container for width, padding, background */
+}
+
+.carouselSection {
+  padding: 2rem 0;
+  background: var(--bg);
+}
+
+.heroSection {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2rem; /* extra space under header */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0; /* reset top margin so H1 and image align */
+  color: var(--primary-green);
+}
+
+.content p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.appStoreButton {
+  width: 200px;
+  height: auto;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.screenshot {
+  max-width: 35%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
