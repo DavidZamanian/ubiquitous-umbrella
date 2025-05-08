@@ -8,3 +8,9 @@ export interface Post {
   updatedAt: Date;
   tags?: string[];
 }
+
+declare module "*.module.css";
+declare module "*.css";
+declare module "*.png";
+declare module "*.PNG";
+declare module "*.svg";

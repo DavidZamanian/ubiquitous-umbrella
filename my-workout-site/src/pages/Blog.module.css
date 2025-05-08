@@ -1,0 +1,17 @@
+.searchInput {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.postsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.banner {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0;
+}

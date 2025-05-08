@@ -27,9 +27,7 @@ body {
 }
 
 .app {
-  display: flex;
   flex-direction: column;
-  min-height: 100%;
 }
 
 /* theme variable overrides via body classes */
@@ -53,8 +51,7 @@ body.dark .pageContainer {
 .pageContainer {
   flex: 1 0 auto;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+
   background: var(--bg);
 }

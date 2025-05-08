@@ -20,12 +20,13 @@
 
 .content {
   flex: 1;
+  justify-content: center;
+  text-align: center;
 }
 
 .content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0 0 1rem 0; /* reset top margin so H1 and image align */
-  color: var(--primary-green);
 }
 
 .content p {
@@ -50,4 +51,47 @@
   max-width: 35%;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stackContainer {
+  position: relative;
+  width: 35%;
+}
+.screenshotBack1,
+.screenshotBack2,
+.screenshotFront {
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.screenshotBack1 {
+  width: 45%;
+  top: 20px;
+  left: 30%;
+  transform: translateX(-100%) rotate(-5deg);
+  z-index: 1;
+}
+.screenshotBack2 {
+  width: 45%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(50%) rotate(5deg);
+  z-index: 2;
+}
+.screenshotFront {
+  width: 65%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  filter: blur(2px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }

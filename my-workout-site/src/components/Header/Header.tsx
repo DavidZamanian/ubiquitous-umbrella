@@ -15,6 +15,8 @@ export const Header: React.FC = () => {
     document.body.classList.remove("light", "dark");
     document.body.classList.add(theme);
     localStorage.setItem("theme", theme);
+    // Dispatch custom event so other components update immediately
+    window.dispatchEvent(new CustomEvent("themeChange", { detail: theme }));
   }, [theme]);
 
   const [show, setShow] = useState(true);
@@ -35,13 +37,13 @@ export const Header: React.FC = () => {
       className={`${styles.header} ${show ? styles.visible : styles.hidden}`}
     >
       <div className={styles.logo}>
-        <Link to="/">MyWorkout</Link>
+        <Link to="/">App Name</Link>
       </div>
       <div className={styles.navContainer}>
         <nav>
-          <NavLink to="/about">About us</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
+          {/* <NavLink to="/about">About us</NavLink>  */}
           <NavLink to="/app">App</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
           <NavLink to="/contact">Contact us</NavLink>
         </nav>
         <label className={styles.switch}>
